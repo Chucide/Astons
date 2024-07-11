@@ -18,9 +18,9 @@ public class Main {
     attractionsArray[2] = park.new Attraction("Космическое путешествие", "10:00 - 18:00", 25);
 
     System.out.println("\nПервое задание:\n\n" + workerTask);
-    System.out.println("\n Второе задание:\n");
+    System.out.println("\nВторое задание:\n");
     workerTask.allWorkers(workerArray);
-    System.out.println("\n Третье задание:\n");
+    System.out.println("\nТретье задание:\n");
     park.attractionsInPark(attractionsArray);
     park.attractionsInfo(attractionsArray);
 

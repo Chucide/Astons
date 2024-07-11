@@ -3,13 +3,13 @@ package Entertainment;
 
 public class Park {
     public void attractionsInPark(Attraction[] array) {
-        System.out.println(" В парке работают следующие аттракционы: ");
+        System.out.println("В парке работают следующие аттракционы: ");
         for (Attraction listOfAttractions : array) {
             System.out.println(listOfAttractions.getAttractionName());
         }
     }
     public void attractionsInfo(Attraction[] array) {
-        System.out.println("\nПодробная информация о каждом аттракционе: ");
+        System.out.println("\nИнформация о каждом аттракционе: ");
         for (Attraction listOfAttractions : array) {
             System.out.println(listOfAttractions.toString());
         }
@@ -30,8 +30,8 @@ public class Park {
     } @Override
     public String toString() {
         return nameAttraction +
-                "\n- Время работы:" + hourseWorking +
-                "\n- Стоимость одного использования: " + priceAttraction + ".";
+                "\n- Время работы: " + hourseWorking +
+                "\n- Стоимость аттракциона: " + priceAttraction + ".";
         }
     }
 }
