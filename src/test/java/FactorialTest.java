@@ -1,45 +1,29 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import calculations.FactorialCalculation;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
 
 public class FactorialTest {
-    @ParameterizedTest
-    @ValueSource(ints = {0, 1})
-    void testFactorialOfZeroAndOne(int number) {
-        assertEquals(1, FactorialCalculation.factorialCalculate(number));
+
+    @DataProvider(name = "dataForTest")
+    public Object[][] dataArrayFactorial() {
+        return new Object[][]{
+                {0, 1},
+                {1, 1},
+                {2, 2},
+                {5, 120},
+                {10, 3628800}
+        };
     }
 
-    @ParameterizedTest
-    @ValueSource(ints = {2})
-    void testFactorialOfTwo(int number) {
-        assertEquals(2, FactorialCalculation.factorialCalculate(number));
+    @Test(dataProvider = "dataForTest")
+    public void testFactorial(int input, long expected) {
+        assertEquals(FactorialCalculation.factorialCalculate(input), expected);
     }
 
-    @ParameterizedTest
-    @ValueSource(ints = {3})
-    void testFactorialOfThree(int number) {
-        assertEquals(6, FactorialCalculation.factorialCalculate(number));
-    }
-
-    @ParameterizedTest
-    @ValueSource(ints = {4})
-    void testFactorialOfFour(int number) {
-        assertEquals(24, FactorialCalculation.factorialCalculate(number));
-    }
-
-    @ParameterizedTest
-    @ValueSource(ints = {5})
-    void testFactorialOfFive(int number) {
-        assertEquals(120, FactorialCalculation.factorialCalculate(number));
-    }
-
-    @ParameterizedTest
-    @ValueSource(ints = {-1, -5, -10})
-    void testFactorialOfNegativeNumbers(int number) {
-        assertThrows(IllegalArgumentException.class, () -> FactorialCalculation.factorialCalculate(number));
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void testNegativeNumber() {
+        FactorialCalculation.factorialCalculate(-15);
     }
 }
