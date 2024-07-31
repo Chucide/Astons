@@ -19,6 +19,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -101,6 +104,8 @@
       <workItem from="1722271823804" duration="46000" />
       <workItem from="1722271882674" duration="59000" />
       <workItem from="1722271954194" duration="51000" />
+      <workItem from="1722441520535" duration="134000" />
+      <workItem from="1722441664827" duration="157000" />
     </task>
     <servers />
   </component>
