@@ -2,7 +2,7 @@ package framework.enums;
 
 public enum MtsPaymentCategory {
     COMMUNICATION_SERVICES("Услуги связи"),
-    HOME_INTERNET("Домашний интренет"),
+    HOME_INTERNET("Домашний интернет"),
     CREDIT("Рассрочка"),
     DEBT("Задолженность");
 
